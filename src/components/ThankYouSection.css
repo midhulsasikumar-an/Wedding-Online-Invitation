@@ -1,0 +1,112 @@
+.thank-you-section {
+  background-position: 37%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: var(--bg_attachment);
+  height: var(--hundred_vh);
+  position: relative;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.thank-you-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay_color);
+  opacity: var(--overlay_opacity);
+  pointer-events: none;
+}
+
+.thank-you-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2% 3%;
+}
+
+.thank-you-content h2 {
+  font-family: var(--font-thanks-heading);
+  letter-spacing: 8px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.thank-you-content p {
+  font-family: var(--font-thanks-body);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  padding: 1% 5%;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.social-share {
+  z-index: 2;
+  opacity: 0.8;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.social-share div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-share span {
+  padding: 5px;
+  color: var(--color-white);
+  margin-left: 10px;
+  font-size: 1.5rem;
+  animation: social-pulse 4s infinite alternate-reverse;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-share .whatsapp-icon:hover {
+  color: #25d366;
+}
+
+.social-share .instagram-icon:hover {
+  color: #e1306c;
+}
+
+@keyframes social-pulse {
+  0% { color: #e1306c; }
+  50% { color: #e1306c; }
+  100% { color: var(--color-white); }
+}
+
+@keyframes social-pulse-wa {
+  0% { color: #25d366; }
+  50% { color: #25d366; }
+  100% { color: var(--color-white); }
+}
+
+.social-share .whatsapp-icon {
+  animation: social-pulse-wa 4s infinite alternate-reverse;
+}
+
+.fade-in {
+  animation: fadeIn var(--animation_duration) var(--animation_easing) forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .thank-you-section {
+    background-attachment: scroll;
+  }
+}
