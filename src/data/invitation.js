@@ -2,21 +2,21 @@ export const invitation = {
   couple: {
     brideName: "Arya",
     groomName: "Abijith",
-    weddingDate: "14 November 2026",
+    weddingDate: "15 November 2026",
     weddingTime: "10:00 AM onwards",
     heroImage: "/assets/together.jpeg",
     brideImage: "/assets/bride.jpeg",
     groomImage: "/assets/groom.jpeg",
     family: {
       bride: "D/o Rajan Arackal & Shija Rajan",
-      groom: "S/o Ravindran KS & Saritha Ravindran"
+      groom: "S/o Sajeev E.R & Shiny Sajeev"
     }
   },
   events: [
     {
       id: "wedding & reception",
       title: "Wedding & Reception",
-      date: "14 November 2026",
+      date: "15 November 2026",
       time: "10:00 AM & 4:00 PM",
       venue: "Mattammel Auditorium",
       address: "Allapara, Perumbavoor, Ernakulam",
@@ -28,7 +28,6 @@ export const invitation = {
     { src: "/assets/together.jpeg", alt: "The couple together" },
     { src: "/assets/bride.jpeg", alt: "Bride portrait" },
     { src: "/assets/groom.jpeg", alt: "Groom portrait" },
-    { src: "/assets/wedding-reception.png", alt: "Wedding venue" }
   ],
   closing: {
     heading: "THANK YOU",
