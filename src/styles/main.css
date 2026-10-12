@@ -73,6 +73,7 @@
   --text-ui: clamp(1rem, 2.5vw, 1.4rem);
 
   --content-max: 72rem;
+  --content-max-wide: 90rem;
   --page-gutter: clamp(1rem, 4vw, 3rem);
   --section-space: clamp(3rem, 8vw, 7rem);
   --radius-image: 50%;

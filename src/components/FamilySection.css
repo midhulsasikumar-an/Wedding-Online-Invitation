@@ -13,6 +13,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 769px) {
+  .family-section .container {
+    max-width: var(--content-max-wide);
+  }
+}
+
 .family-section .section-heading {
   margin-top: 10px;
   margin-bottom: clamp(2rem, 5vw, 3rem);

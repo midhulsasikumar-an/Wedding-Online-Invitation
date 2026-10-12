@@ -12,6 +12,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 769px) {
+  .events-section .container {
+    max-width: var(--content-max-wide);
+  }
+}
+
 .events-section .section-heading {
   margin-bottom: 20px;
 }
@@ -126,11 +132,11 @@
 
 @media (min-width: 769px) {
   .event-item {
-    max-width: 900px;
+    max-width: 1000px;
   }
   
   .event-image {
-    min-height: 220px;
-    min-width: 220px;
+    min-height: 240px;
+    min-width: 240px;
   }
 }

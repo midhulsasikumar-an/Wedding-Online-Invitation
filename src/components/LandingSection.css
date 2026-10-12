@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: var(--bg_attachment);
+  width: 100%;
 }
 
 .landing-section::after {
@@ -97,8 +98,12 @@
 
 @media (min-width: 769px) {
   .landing-section {
-    background-position: center 25%;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
     min-height: 100vh;
     height: auto;
+    padding-top: clamp(4rem, 8vh, 6rem);
+    padding-bottom: clamp(4rem, 8vh, 6rem);
   }
 }

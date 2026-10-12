@@ -113,10 +113,14 @@
 
 @media (min-width: 769px) {
   .thank-you-section {
-    background-position: center 30%;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: auto;
     min-height: 100vh;
     padding: var(--section-space) var(--page-gutter);
+    padding-top: clamp(4rem, 8vh, 6rem);
+    padding-bottom: clamp(4rem, 8vh, 6rem);
   }
   
   .thank-you-content {
