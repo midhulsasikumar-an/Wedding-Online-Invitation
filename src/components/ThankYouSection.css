@@ -110,3 +110,16 @@
     background-attachment: scroll;
   }
 }
+
+@media (min-width: 769px) {
+  .thank-you-section {
+    background-position: center 30%;
+    height: auto;
+    min-height: 100vh;
+    padding: var(--section-space) var(--page-gutter);
+  }
+  
+  .thank-you-content {
+    padding: 4% 5%;
+  }
+}

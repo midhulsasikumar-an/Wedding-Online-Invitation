@@ -8,6 +8,8 @@
 .events-section .container {
   position: relative;
   z-index: 2;
+  max-width: var(--content-max);
+  margin: 0 auto;
 }
 
 .events-section .section-heading {
@@ -22,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 5vw, 3rem);
+  align-items: center;
 }
 
 .event-item {
@@ -30,6 +33,9 @@
   padding-top: 20px;
   text-align: center;
   padding-bottom: 50px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .event-item h6 {
@@ -115,5 +121,16 @@
   .event-image {
     min-height: 150px;
     min-width: 150px;
+  }
+}
+
+@media (min-width: 769px) {
+  .event-item {
+    max-width: 900px;
+  }
+  
+  .event-image {
+    min-height: 220px;
+    min-width: 220px;
   }
 }

@@ -94,3 +94,11 @@
     background-attachment: scroll;
   }
 }
+
+@media (min-width: 769px) {
+  .landing-section {
+    background-position: center 25%;
+    min-height: 100vh;
+    height: auto;
+  }
+}
