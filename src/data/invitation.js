@@ -31,6 +31,9 @@ export const invitation = {
   ],
   closing: {
     heading: "THANK YOU",
-    message: "We can't wait to see all of our beloved friends and relatives at the wedding."
+    message: "We can't wait to see all of our beloved friends and relatives at the wedding.",
+    closingLine: "Thank you for being part of our story.",
+    signOff: "With love,",
+    names: "Arya & Abhijith"
   }
 };

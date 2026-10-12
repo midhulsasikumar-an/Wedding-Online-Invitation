@@ -4,6 +4,7 @@ import { EventsSection } from './components/EventsSection.jsx';
 import { GallerySection } from './components/GallerySection.jsx';
 import { ThankYouSection } from './components/ThankYouSection.jsx';
 import { MusicToggle } from './components/MusicToggle.jsx';
+import { ShareToggle } from './components/ShareToggle.jsx';
 import './styles/main.css';
 
 export function App() {
@@ -15,6 +16,7 @@ export function App() {
       <GallerySection />
       <ThankYouSection />
       <MusicToggle />
+      <ShareToggle />
     </>
   );
 }
