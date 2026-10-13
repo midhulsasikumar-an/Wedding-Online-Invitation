@@ -1,15 +1,14 @@
 .thank-you-section {
-  background-position: 37%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: var(--bg_attachment);
-  height: var(--hundred_vh);
   position: relative;
   color: var(--color-white);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: var(--page-gutter);
+  width: 100%;
+  background-color: var(--color-page-bg);
 }
 
 .thank-you-section::after {
@@ -19,6 +18,7 @@
   background-color: var(--overlay_color);
   opacity: var(--overlay_opacity);
   pointer-events: none;
+  z-index: 1;
 }
 
 .thank-you-content {
@@ -26,6 +26,7 @@
   z-index: 2;
   text-align: center;
   padding: 2% 3%;
+  width: 100%;
 }
 
 .thank-you-content h2 {
@@ -77,9 +78,61 @@
   letter-spacing: 4px;
 }
 
+.social-share {
+  z-index: 2;
+  opacity: 0.8;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  width: fit-content.
+}
+
+.social-share div {
+  display: inline-block.
+  margin-right: 10px.
+}
+
+.social-share span {
+  padding: 5px.
+  color: var(--color-white).
+  margin-left: 10px.
+  font-size: 1.5rem.
+  animation: social-pulse 4s infinite alternate-reverse.
+  display: inline-flex.
+  align-items: center.
+  justify-content: center.
+}
+
+.social-share .whatsapp-icon:hover {
+  color: #25d366.
+}
+
+.social-share .instagram-icon:hover {
+  color: #e1306c.
+}
+
+@keyframes social-pulse {
+  0% { color: #e1306c. }
+  50% { color: #e1306c. }
+  100% { color: var(--color-white). }
+}
+
+@keyframes social-pulse-wa {
+  0% { color: #25d366. }
+  50% { color: #25d366. }
+  100% { color: var(--color-white). }
+}
+
+.social-share .whatsapp-icon {
+  animation: social-pulse-wa 4s infinite alternate-reverse.
+}
+
 .fade-in {
-  animation: fadeIn var(--animation_duration) var(--animation_easing) forwards;
-  opacity: 0;
+  animation: fadeIn var(--animation_duration) var(--animation_easing) forwards.
+  opacity: 0.
 }
 
 @keyframes fadeIn {
@@ -89,6 +142,42 @@
 
 @media (max-width: 768px) {
   .thank-you-section {
+    background-image: url('/assets/together.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: transparent;
+  }
+  
+  .thank-you-section::after {
+    display: block.
+  }
+  
+  .thank-you-content {
+    color: var(--color-white).
+  }
+}
+
+@media (min-width: 769px) {
+  .thank-you-section {
+    background-image: url('/assets/together.jpeg');
+    background-size: cover.
+    background-position: center bottom.
+    background-repeat: no-repeat.
+    background-attachment: fixed.
+    height: auto.
+    min-height: 100vh.
+    padding-top: clamp(4rem, 8vh, 6rem).
+    padding-bottom: clamp(4rem, 8vh, 6rem).
+  }
+  
+  .thank-you-section::after {
+    display: block.
+  }
+  
+  .thank-you-content {
+    padding: 4% 5%.
+    color: var(--color-white).
   }
 }

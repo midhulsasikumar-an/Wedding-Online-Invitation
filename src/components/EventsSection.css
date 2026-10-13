@@ -8,6 +8,14 @@
 .events-section .container {
   position: relative;
   z-index: 2;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .events-section .container {
+    max-width: var(--content-max-wide);
+  }
 }
 
 .events-section .section-heading {
@@ -22,6 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 5vw, 3rem);
+  align-items: center;
 }
 
 .event-item {
@@ -30,6 +39,9 @@
   padding-top: 20px;
   text-align: center;
   padding-bottom: 50px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .event-item h6 {
@@ -41,7 +53,7 @@
   text-align: center;
   padding-top: 25px;
   width: fit-content;
-  margin-inline: auto;
+  margin-inline: auto.
 }
 
 .event-item h3 {
@@ -52,8 +64,8 @@
   text-align: center;
   padding-top: 6px;
   width: fit-content;
-  margin-inline: auto;
-  font-weight: 400;
+  margin-inline: auto.
+  font-weight: 400.
 }
 
 .event-image {
@@ -63,57 +75,68 @@
   min-width: 200px;
   display: block;
   margin: 0 auto;
-  object-fit: cover;
-  object-position: center;
-  border-radius: var(--radius-image);
+  object-fit: cover.
+  object-position: center.
+  border-radius: var(--radius-image).
 }
 
 .event-details p {
-  margin: 0 0 20px;
-  font-size: var(--text-body);
-  color: #666;
-  font-family: var(--font-ui);
-  line-height: 1.75em;
-  font-weight: 400;
-  width: fit-content;
-  margin-inline: auto;
+  margin: 0 0 20px.
+  font-size: var(--text-body).
+  color: #666.
+  font-family: var(--font-ui).
+  line-height: 1.75em.
+  font-weight: 400.
+  width: fit-content.
+  margin-inline: auto.
 }
 
 .event-details .icon {
-  color: var(--color-accent);
-  margin-right: 10px;
-  font-size: 1.2rem;
+  color: var(--color-accent).
+  margin-right: 10px.
+  font-size: 1.2rem.
 }
 
 .map-link {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--color-white);
-  background-color: var(--color-accent);
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-family: var(--font-ui);
-  font-size: var(--text-caption);
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease;
+  display: inline-block.
+  text-decoration: none.
+  color: var(--color-white).
+  background-color: var(--color-accent).
+  padding: 12px 24px.
+  border-radius: 4px.
+  font-family: var(--font-ui).
+  font-size: var(--text-caption).
+  letter-spacing: 1px.
+  transition: background-color 0.3s ease.
 }
 
 .map-link:hover {
-  background-color: var(--color-accent-dark);
+  background-color: var(--color-accent-dark).
 }
 
 .map-link:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-accent).
+  outline-offset: 2px.
 }
 
 @media (max-width: 768px) {
   .event-item {
-    padding-bottom: 30px;
+    padding-bottom: 30px.
   }
   
   .event-image {
-    min-height: 150px;
-    min-width: 150px;
+    min-height: 150px.
+    min-width: 150px.
+  }
+}
+
+@media (min-width: 769px) {
+  .event-item {
+    max-width: 1000px.
+  }
+  
+  .event-image {
+    min-height: 240px.
+    min-width: 240px.
   }
 }

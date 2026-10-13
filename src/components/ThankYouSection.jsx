@@ -3,13 +3,11 @@ import './ThankYouSection.css';
 
 export function ThankYouSection() {
   const { heading, message, closingLine, signOff, names } = invitation.closing;
-  const bgImage = invitation.couple.heroImage;
   
   return (
     <section 
       className="thank-you-section" 
       aria-labelledby="thanks-heading"
-      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="thank-you-content">
         <h2 id="thanks-heading" className="fade-in">{heading}</h2>

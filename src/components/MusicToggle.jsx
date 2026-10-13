@@ -12,7 +12,7 @@ export function MusicToggle() {
     initializedRef.current = true;
 
     try {
-      audioRef.current = new Audio('/assests/music.mp3');
+      audioRef.current = new Audio('/assets/music.mp3');
       audioRef.current.loop = true;
       audioRef.current.volume = 0.4;
       
@@ -46,16 +46,13 @@ export function MusicToggle() {
     }
   };
 
-  if (!isSupported) {
-    return null;
-  }
-
   return (
     <button
-      className={`music-toggle ${isPlaying ? 'playing' : 'paused'}`}
+      className={`music-toggle ${isPlaying ? 'playing' : 'paused'} ${!isSupported ? 'unsupported' : ''}`}
       onClick={toggleMusic}
-      aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
+      aria-label={isSupported ? (isPlaying ? 'Pause background music' : 'Play background music') : 'Background music not available'}
       aria-pressed={isPlaying}
+      aria-disabled={!isSupported}
       type="button"
     >
       {isPlaying ? (

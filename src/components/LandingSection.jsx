@@ -2,10 +2,10 @@ import { invitation } from '../data/invitation.js';
 import './LandingSection.css';
 
 export function LandingSection() {
-  const { brideName, groomName, weddingDate, heroImage } = invitation.couple;
+  const { brideName, groomName, weddingDate } = invitation.couple;
   
   return (
-    <section className="landing-section" aria-labelledby="couple-heading" style={{ backgroundImage: `url(${heroImage})` }}>
+    <section className="landing-section" aria-labelledby="couple-heading">
       <div className="background-pattern" />
       <div className="landing-content">
         <h6 id="couple-heading" className="fade-in">SAVE THE DATE</h6>

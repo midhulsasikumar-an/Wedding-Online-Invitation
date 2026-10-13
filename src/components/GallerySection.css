@@ -8,6 +8,14 @@
 .gallery-section .container {
   position: relative;
   z-index: 2;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .gallery-section .container {
+    max-width: var(--content-max-wide);
+  }
 }
 
 .gallery-section .section-heading {
@@ -58,7 +66,7 @@
 @media (min-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1000px;
+    max-width: 1200px;
   }
   .gallery-item img {
     aspect-ratio: 4 / 5;

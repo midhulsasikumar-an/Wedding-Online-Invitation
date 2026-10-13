@@ -7,9 +7,8 @@
   overflow: hidden;
   position: relative;
   padding: var(--page-gutter);
-  background-size: cover;
-  background-position: center;
-  background-attachment: var(--bg_attachment);
+  width: 100%;
+  background-color: var(--color-page-bg);
 }
 
 .landing-section::after {
@@ -91,6 +90,41 @@
 
 @media (max-width: 768px) {
   .landing-section {
+    background-image: url('/assets/together.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: transparent;
+  }
+  
+  .landing-section::after {
+    display: block;
+  }
+  
+  .landing-content {
+    color: var(--color-white);
+  }
+}
+
+@media (min-width: 769px) {
+  .landing-section {
+    background-image: url('/assets/together.jpeg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    padding-top: clamp(4rem, 8vh, 6rem);
+    padding-bottom: clamp(4rem, 8vh, 6rem);
+  }
+  
+  .landing-section::after {
+    display: block;
+  }
+  
+  .landing-content {
+    color: var(--color-white);
   }
 }
