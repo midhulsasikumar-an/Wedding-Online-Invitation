@@ -130,7 +130,7 @@
 }
 
 @media (min-width: 769px) {
-  .couple-container {
+  .family-section .couple-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(3rem, 6vw, 5rem);
@@ -138,16 +138,16 @@
     align-items: start;
   }
   
-  .person {
+  .family-section .person {
     max-width: 450px;
     width: 100%;
   }
   
-  .person:first-child {
+  .family-section .person:first-child {
     order: 2;
   }
   
-  .person:last-child {
+  .family-section .person:last-child {
     order: 1;
   }
 }
