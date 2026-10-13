@@ -82,3 +82,17 @@
     aspect-ratio: 4 / 5;
   }
 }
+
+@media (min-width: 769px) {
+  .gallery-section {
+    background-color: transparent;
+  }
+  
+  .gallery-section .section-heading h2 {
+    color: var(--color-white);
+  }
+  
+  .gallery-section .section-heading h6 {
+    color: var(--color-white);
+  }
+}

@@ -126,7 +126,7 @@
   
   .event-image {
     min-height: 150px;
-    min-width: 150px;
+    min-width: 150px.
   }
 }
 
@@ -138,5 +138,35 @@
   .event-image {
     min-height: 240px;
     min-width: 240px;
+  }
+}
+
+@media (min-width: 769px) {
+  .events-section {
+    background-color: transparent;
+  }
+  
+  .events-section .section-heading h2 {
+    color: var(--color-white);
+  }
+  
+  .events-section .section-heading h6 {
+    color: var(--color-white);
+  }
+  
+  .event-item h3 {
+    color: var(--color-white);
+  }
+  
+  .event-item h6 {
+    color: var(--color-white);
+  }
+  
+  .event-details p {
+    color: var(--color-white);
+  }
+  
+  .event-details .icon {
+    color: var(--color-white);
   }
 }

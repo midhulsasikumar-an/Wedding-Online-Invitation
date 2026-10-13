@@ -1,0 +1,52 @@
+.couple-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.couple-bg-layer {
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero-portion {
+  top: 0;
+  height: 100vh;
+  background-position: center top;
+}
+
+.thank-you-portion {
+  bottom: 0;
+  height: 100vh;
+  background-position: center bottom;
+}
+
+@media (max-width: 768px) {
+  .couple-background {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .couple-background {
+    display: block;
+  }
+  
+  .hero-portion {
+    height: calc(100vh + var(--section-space) * 3);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+  }
+  
+  .thank-you-portion {
+    height: calc(100vh + var(--section-space) * 2);
+    clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+  }
+}

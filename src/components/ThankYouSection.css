@@ -1,15 +1,14 @@
 .thank-you-section {
-  background-position: 37%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: var(--bg_attachment);
-  height: var(--hundred_vh);
   position: relative;
   color: var(--color-white);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: var(--page-gutter);
+  width: 100%;
+  background-color: transparent;
 }
 
 .thank-you-section::after {
@@ -19,6 +18,7 @@
   background-color: var(--overlay_color);
   opacity: var(--overlay_opacity);
   pointer-events: none;
+  z-index: 1;
 }
 
 .thank-you-content {
@@ -26,6 +26,7 @@
   z-index: 2;
   text-align: center;
   padding: 2% 3%;
+  width: 100%;
 }
 
 .thank-you-content h2 {
@@ -41,6 +42,40 @@
   padding: 1% 5%;
   letter-spacing: 2px;
   line-height: 1.6;
+}
+
+.closing-line {
+  font-family: var(--font-thanks-body);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: var(--color-white);
+  opacity: 0.9;
+  margin-top: 1.5rem;
+  padding: 0 5%;
+}
+
+.sign-off {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.with-love {
+  font-family: var(--font-thanks-body);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: 2px;
+  color: var(--color-white);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.names {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0.5rem 0 0;
+  letter-spacing: 4px;
 }
 
 .social-share {
@@ -107,23 +142,33 @@
 
 @media (max-width: 768px) {
   .thank-you-section {
+    background-image: var(--hero-image);
+    background-size: cover;
+    background-position: center;
     background-attachment: scroll;
+  }
+  
+  .thank-you-section::after {
+    display: block;
   }
 }
 
 @media (min-width: 769px) {
   .thank-you-section {
-    background-position: center top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: none;
     height: auto;
     min-height: 100vh;
-    padding: var(--section-space) var(--page-gutter);
     padding-top: clamp(4rem, 8vh, 6rem);
     padding-bottom: clamp(4rem, 8vh, 6rem);
   }
   
+  .thank-you-section::after {
+    display: none;
+  }
+  
   .thank-you-content {
     padding: 4% 5%;
+    color: var(--color-white);
   }
 }

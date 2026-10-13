@@ -131,14 +131,14 @@
 
 @media (min-width: 768px) {
   .couple-container {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: flex-start;
     gap: clamp(3rem, 6vw, 5rem);
   }
   
   .couple-container.bride-first {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   
   .person {
@@ -157,5 +157,27 @@
   
   .person-details p {
     padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .family-section {
+    background-color: transparent;
+  }
+  
+  .family-section .section-heading h2 {
+    color: var(--color-white);
+  }
+  
+  .family-section .section-heading h6 {
+    color: var(--color-white);
+  }
+  
+  .person-details h2 {
+    color: var(--color-white);
+  }
+  
+  .person-details p {
+    color: var(--color-white);
   }
 }

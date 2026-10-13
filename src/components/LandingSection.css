@@ -7,10 +7,8 @@
   overflow: hidden;
   position: relative;
   padding: var(--page-gutter);
-  background-size: cover;
-  background-position: center;
-  background-attachment: var(--bg_attachment);
   width: 100%;
+  background-color: transparent;
 }
 
 .landing-section::after {
@@ -92,18 +90,32 @@
 
 @media (max-width: 768px) {
   .landing-section {
+    background-image: var(--hero-image);
+    background-size: cover;
+    background-position: center;
     background-attachment: scroll;
+  }
+  
+  .landing-section::after {
+    display: block;
   }
 }
 
 @media (min-width: 769px) {
   .landing-section {
-    background-position: center top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: none;
     min-height: 100vh;
     height: auto;
     padding-top: clamp(4rem, 8vh, 6rem);
     padding-bottom: clamp(4rem, 8vh, 6rem);
+  }
+  
+  .landing-section::after {
+    display: none;
+  }
+  
+  .landing-content {
+    color: var(--color-white);
   }
 }
