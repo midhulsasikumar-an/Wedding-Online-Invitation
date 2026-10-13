@@ -46,16 +46,13 @@ export function MusicToggle() {
     }
   };
 
-  if (!isSupported) {
-    return null;
-  }
-
   return (
     <button
-      className={`music-toggle ${isPlaying ? 'playing' : 'paused'}`}
+      className={`music-toggle ${isPlaying ? 'playing' : 'paused'} ${!isSupported ? 'unsupported' : ''}`}
       onClick={toggleMusic}
-      aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
+      aria-label={isSupported ? (isPlaying ? 'Pause background music' : 'Play background music') : 'Background music not available'}
       aria-pressed={isPlaying}
+      aria-disabled={!isSupported}
       type="button"
     >
       {isPlaying ? (

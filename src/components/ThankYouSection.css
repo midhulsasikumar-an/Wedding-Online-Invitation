@@ -8,7 +8,7 @@
   min-height: 100vh;
   padding: var(--page-gutter);
   width: 100%;
-  background-color: transparent;
+  background-color: var(--color-page-bg);
 }
 
 .thank-you-section::after {
@@ -142,7 +142,7 @@
 
 @media (max-width: 768px) {
   .thank-you-section {
-    background-image: var(--hero-image);
+    background-image: url('/assets/together.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -151,12 +151,19 @@
   .thank-you-section::after {
     display: block;
   }
+  
+  .thank-you-content {
+    color: var(--color-white);
+  }
 }
 
 @media (min-width: 769px) {
   .thank-you-section {
-    background-color: transparent;
-    background-image: none;
+    background-image: url('/assets/together.jpeg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: auto;
     min-height: 100vh;
     padding-top: clamp(4rem, 8vh, 6rem);
@@ -164,7 +171,7 @@
   }
   
   .thank-you-section::after {
-    display: none;
+    display: block;
   }
   
   .thank-you-content {
