@@ -12,7 +12,7 @@ export function MusicToggle() {
     initializedRef.current = true;
 
     try {
-      audioRef.current = new Audio('/assests/music.mp3');
+      audioRef.current = new Audio('/assets/music.mp3');
       audioRef.current.loop = true;
       audioRef.current.volume = 0.4;
       
